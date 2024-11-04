@@ -1,5 +1,5 @@
-# Anthony's Leetcode Practice
-Using Python or Java to answer leet code problems to prep for tech interviews
+# Anthony's Leetcode and Other Practice
+Using Python or Java to answer leet code and other problems to prep for tech interviews
 
 ##### [Easy Problems]()
 | # | Title | Solution | Time/Space Complexity | Methods/Notes | Date Completed | 
@@ -33,3 +33,4 @@ Using Python or Java to answer leet code problems to prep for tech interviews
 | # | Title | Solution | Time/Space Complexity | Methods/Notes | Date Completed | 
 |---| ----- | -------- | --------------------- | ------------- | -------------- |
 |2781| [Length of the Longest Valid Substring](https://leetcode.com/problems/length-of-the-longest-valid-substring/) | [Java](https://github.com/wena04/Leetcode/blob/a26fd2ec50bb73045b74c9197912f62876b87025/Leetcode%202781%20--%20Length%20of%20the%20Longest%20Valid%20Substring/Leetcode%202781%20--%20Length%20of%20the%20Longest%20Valid%20Substring.java)| O(N * maxlengthofforbidden^2)/O(sum of forbidden words length) | Sliding Window + brute Force |June 1, 2024|
+|N-Other| [N. Numerology](https://codeforces.com/group/CByQ2cxyiu/contest/563409/problem/N) | [Python](https://github.com/wena04/Leetcode-and-Others/tree/b19b8f2601a21eb7e27470c7b6ef230359f10597/UW%20Programming%20Competition%202024%20--%20N.%20Numerology)| O(limit× N^(1/2))/O(1) | Math + optimization of brute force |Nov 2, 2024|
