@@ -1,5 +1,5 @@
-//Leetcode 347: Top K Frequent Elements
-//https://leetcode.com/problems/top-k-frequent-elements/
+# Leetcode 347: Top K Frequent Elements
+# https://leetcode.com/problems/top-k-frequent-elements/
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
@@ -28,6 +28,26 @@ class Solution(object):
 
         #time complexity: O(N)
         #space complexity: O(N)
+
+        #Method 2: PQ/Heap sort
+
+        #priority queue to return most frequent elements
+        heap = []
+        freq = {}
+        for i in nums:
+            freq[i] = freq.get(i,0) + 1
+        
+        for key, value in freq.items():
+            #add into key, sort by freq
+            heapq.heappush(heap, (value, key))
+            if len(heap) > k:
+                heapq.heappop(heap)  # Remove the least frequent ones
+
+        # Extract top k elements from heap
+        return [key for value, key in heap]  # Extract keys only
+    
+        #Time Complexity: O(Nlogk)
+        #Space Complexity: O(N)
 
         
         
