@@ -1,6 +1,7 @@
 # Leetcode 32: Longest Valid Parentheses 
 # https://leetcode.com/problems/longest-valid-parentheses/
 
+#idea: use stack to keep track of last valid index, change it if it is not
 class Solution(object):
     def longestValidParentheses(self, s):
         """
@@ -24,4 +25,7 @@ class Solution(object):
         
         return answer
 
-        #By storing indices instead of characters, we can compute valid lengths by taking differences between indices. We start with -1 in the stack to handle cases where the sequence starts at index 0
+#By storing indices instead of characters, we can compute valid lengths by taking differences between indices. 
+# We start with -1 in the stack to handle cases where the sequence starts at index 0
+#time complexity: O(N)
+#space complexity: O(N)
