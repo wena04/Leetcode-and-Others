@@ -13,10 +13,10 @@ class Solution(object):
         if len(s) != len(t): return False #base case, if the 2 strings are just different length
         countS, countT = {},{}
         for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i],0) #the get method provides default value of 0 if s[i] no exist
+            countS[s[i]] = 1 + countS.get(s[i],0) # the get method provides default value of 0 if s[i] no exist
             countT[t[i]] = 1 + countT.get(t[i],0)
         for j in countS:
-            if countS[c] != countT.get(c,0): return False 
+            if countS[j] != countT.get(j,0): return False # has to use .get since letter could be N/A in one of the words, which is 0
         return True
 
         #time complexity: O(N) or technically both O(s+t)
