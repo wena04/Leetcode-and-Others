@@ -10,15 +10,15 @@ class Solution(object):
         # hashmap to keep track of what we seen before
         seen = {}
 
-        # use enumerate to keep track of the index and indexies easily
-        for value, key in enumerate(nums):
-            searching = target - key
+        # use enumerate to keep track of the index and indices/values of nums easily: 
+        # enumerate function gives you a pair of (index, values) of the variable your iterating through
+        for i, value in enumerate(nums):
+            searching = target - value
             if searching in seen:
-                return [value, seen[searching]]
-            else:
-                seen[key] = value
+                return [i, seen[searching]]
+            seen[value] = i
         
-        return
+        return []
 
 # time complexity: O(N)
 # space complexity: O(N)
