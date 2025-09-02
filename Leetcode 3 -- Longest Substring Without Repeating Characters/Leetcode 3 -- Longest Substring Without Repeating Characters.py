@@ -7,6 +7,8 @@ class Solution(object):
         :rtype: int
         """
         #Method 1: sliding window method
+
+        #using hashset
         left = answer = 0
         seen = set()
 
@@ -20,6 +22,23 @@ class Solution(object):
             answer = max(answer, right - left + 1)
         
         return answer
+
+        #using hashmap
+        left = answer = 0
+        seen = {}
+        #keep moving left pointer until window is valid
+        #enumerate gives us pair of (current index, value at current index)
+        for right_index, value in enumerate(s):
+            #if we seen this value before, and value is in our window
+            while value in seen and seen[value] >= left:
+                #move the window to place we last seen the value
+                left = seen[value] + 1
+            #update last time we seen value
+            seen[value] = right_index
+            #update answer by checking if current window is larger than previous window
+            answer = max(answer,right_index-left+1)
+        return answer
+
         # time complexity: O(N)
         # space complexity: O(N)
 
