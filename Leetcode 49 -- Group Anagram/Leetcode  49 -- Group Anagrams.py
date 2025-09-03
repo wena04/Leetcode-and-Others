@@ -1,5 +1,5 @@
-//Leetcode 49: Group Anagrams
-//https://leetcode.com/problems/group-anagrams/
+# Leetcode 49: Group Anagrams
+# https://leetcode.com/problems/group-anagrams/
 class Solution(object):
     def groupAnagrams(self, strs):
         """
